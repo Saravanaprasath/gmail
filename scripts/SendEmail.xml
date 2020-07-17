@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Compose email and send">
+    <test name="Login into Gmail">
+        <classes>
+            <class name="tests.LoginPageTests">
+                <methods>
+                    <include name="loginToGmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Compose and send email">
+        <classes>
+            <class name="tests.GmailPageTests">
+                <methods>
+                    <include name="composeAndSend"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify Email Sent">
+        <classes>
+            <class name="tests.GmailPageTests">
+                <methods>
+                    <include name="verifyEmailInSentBox"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
