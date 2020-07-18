@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="2" total="5" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Compose email and send" duration-ms="30428" started-at="2020-07-16T22:27:01 IST" finished-at="2020-07-16T22:27:32 IST">
+  <suite name="Compose email and send" duration-ms="24153" started-at="2020-07-18T12:03:23 IST" finished-at="2020-07-18T12:03:47 IST">
     <groups>
     </groups>
-    <test name="Login into Gmail" duration-ms="4191" started-at="2020-07-16T22:27:01 IST" finished-at="2020-07-16T22:27:06 IST">
+    <test name="Login into Gmail" duration-ms="3892" started-at="2020-07-18T12:03:23 IST" finished-at="2020-07-18T12:03:26 IST">
       <class name="tests.LoginPageTests">
-        <test-method status="PASS" signature="loginToGmail()[pri:0, instance:tests.LoginPageTests@290222c1]" name="loginToGmail" duration-ms="4161" started-at="2020-07-16T22:27:01 IST" finished-at="2020-07-16T22:27:06 IST">
+        <test-method status="PASS" signature="loginToGmail()[pri:0, instance:tests.LoginPageTests@3cebbb30]" name="loginToGmail" duration-ms="3867" started-at="2020-07-18T12:03:23 IST" finished-at="2020-07-18T12:03:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToGmail -->
       </class> <!-- tests.LoginPageTests -->
     </test> <!-- Login into Gmail -->
-    <test name="Compose and send email" duration-ms="15859" started-at="2020-07-16T22:27:06 IST" finished-at="2020-07-16T22:27:22 IST">
+    <test name="Compose and send email" duration-ms="14208" started-at="2020-07-18T12:03:26 IST" finished-at="2020-07-18T12:03:41 IST">
       <class name="tests.GmailPageTests">
-        <test-method status="PASS" signature="composeAndSend()[pri:0, instance:tests.GmailPageTests@53aac487]" name="composeAndSend" duration-ms="15859" started-at="2020-07-16T22:27:06 IST" finished-at="2020-07-16T22:27:22 IST">
+        <test-method status="PASS" signature="composeAndSend()[pri:0, instance:tests.GmailPageTests@72e5a8e]" name="composeAndSend" duration-ms="14204" started-at="2020-07-18T12:03:26 IST" finished-at="2020-07-18T12:03:41 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- composeAndSend -->
       </class> <!-- tests.GmailPageTests -->
     </test> <!-- Compose and send email -->
-    <test name="Verify Email Sent" duration-ms="10347" started-at="2020-07-16T22:27:22 IST" finished-at="2020-07-16T22:27:32 IST">
+    <test name="Verify Email Sent" duration-ms="6029" started-at="2020-07-18T12:03:41 IST" finished-at="2020-07-18T12:03:47 IST">
       <class name="tests.GmailPageTests">
-        <test-method status="PASS" signature="verifyEmailInSentBox()[pri:0, instance:tests.GmailPageTests@2d52216b]" name="verifyEmailInSentBox" duration-ms="10347" started-at="2020-07-16T22:27:22 IST" finished-at="2020-07-16T22:27:32 IST">
+        <test-method status="PASS" signature="verifyEmailInSentBox()[pri:0, instance:tests.GmailPageTests@73e9cf30]" name="verifyEmailInSentBox" duration-ms="6029" started-at="2020-07-18T12:03:41 IST" finished-at="2020-07-18T12:03:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEmailInSentBox -->

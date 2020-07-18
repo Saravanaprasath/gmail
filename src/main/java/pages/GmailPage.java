@@ -70,16 +70,24 @@ public class GmailPage extends TestBase {
         }
     }
 
+    @FindBy(xpath = "//div[@aria-label='Show details']")
+    WebElement showDetails;
+
     public void verifyInSentBox() {
         try {
+            Thread.sleep(5000);
             se.clickElement(sentTab);
             String emailSubject = readProperties.getPropValue(fileName, "emailSubject");
+            String sentId = readProperties.getPropValue(fileName,"recipientEmailId");
             String subjectXp1 = "(//span[text()='" + emailSubject + "']//ancestor::td[@id and @tabindex='-1' and @role='gridcell'])[1]";
             driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
             WebElement emailSubInSentBox = driver.findElement(By.xpath(subjectXp1));
             se.clickElement(emailSubInSentBox);
             String headingXp = "//h2[text()='" + emailSubject + "']";
-            if (driver.findElement(By.xpath(headingXp)).isDisplayed()) {
+            se.clickElement(showDetails);
+            String sendId = "//table//tr[2]//td[2]//span[@data-hovercard-id='"+sentId+"']";
+            //WebElement senderID = driver.findElement(By.xpath(sendId));
+            if (driver.findElement(By.xpath(headingXp)).isDisplayed()&&driver.findElement(By.xpath(sendId)).isDisplayed()) {
                 System.out.println("Email Sent");
             } else {
                 System.out.println("Email Not sent");
