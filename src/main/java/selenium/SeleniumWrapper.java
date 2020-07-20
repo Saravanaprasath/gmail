@@ -1,8 +1,10 @@
 package selenium;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import testbase.TestBase;
@@ -60,5 +62,15 @@ public class SeleniumWrapper extends TestBase {
         }
         return res;
     }
+
+    /*public boolean pressKey(Keys keys){
+        boolean res = false;
+        try{
+            Actions actions = new Actions(driver);
+            actions.sendKeys(keys);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }*/
 
 }

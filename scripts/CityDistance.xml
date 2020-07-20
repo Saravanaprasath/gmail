@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Find distance between two cities">
+    <test name="Login into Gmail">
+        <classes>
+            <class name="tests.LoginPageTests">
+                <methods>
+                    <include name="loginToGmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Go to Google Map">
+        <classes>
+            <class name="tests.MapPageTests">
+                <methods>
+                    <include name="goToMap"/>
+                    <include name="findDistances"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
