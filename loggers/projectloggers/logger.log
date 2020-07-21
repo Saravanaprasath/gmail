@@ -1,0 +1,8 @@
+2020-07-21 17:05:38 INFO  TestBase:43 - You are running in Chrome Browser in Windows OS
+2020-07-21 17:05:45 INFO  LoginPage:43 - https://mail.google.com/ is opened
+2020-07-21 17:05:49 INFO  LoginPage:55 - Email & Password entered
+2020-07-21 17:05:49 INFO  LoginPageTests:26 - Logged in successfully
+2020-07-21 17:05:53 INFO  MapPage:50 - https://www.google.com/maps is opened
+2020-07-21 17:05:53 INFO  MapPageTests:26 - Map url is opened
+2020-07-21 17:05:56 INFO  MapPage:71 - 266 kmis the distance between two places
+2020-07-21 17:05:56 INFO  MapPageTests:40 - Distance found

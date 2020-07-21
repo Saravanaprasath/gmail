@@ -1,5 +1,7 @@
 package testbase;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,20 +16,20 @@ import java.util.Properties;
 
 public class TestBase {
     public static WebDriver driver = null;
-    //public static String browser = "Chrome";
     FileInputStream stream = new FileInputStream("config.properties");
     Properties properties;
+    static Logger logger;
 
     public TestBase() throws IOException {
         properties = new Properties();
+        logger = Logger.getLogger(TestBase.class);
         if (driver == null) {
             initDriver();
         }
     }
 
     public void initDriver() throws IOException {
-        //browser = browser.toLowerCase();
-        //String osName = System.getProperty("os.name").toLowerCase();
+        PropertyConfigurator.configure("loggers/log4j.properties");
         properties.load(stream);
         String osName = properties.getProperty("os");
         String browser = properties.getProperty("browser");
@@ -38,8 +40,10 @@ public class TestBase {
         if (browser.contains("chrome")) {
             if (osName.contains("windows")) {
                 System.setProperty("webdriver.chrome.driver", winChromeDriverPath);
+                logger.info("You are running in Chrome Browser in Windows OS");
             } else if (osName.contains("nux")) {
                 System.setProperty("webdriver.chrome.driver", linuxChromeDriverPath);
+                logger.info("You are running in Chrome Browser in Linux OS");
             }
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
@@ -48,30 +52,15 @@ public class TestBase {
         if (browser.contains("firefox")) {
             if (osName.contains("windows")) {
                 System.setProperty("webdriver.gecko.driver", winFireFoxDriverPath);
+                logger.info("You are running in Firefox Browser in Windows OS");
             } else if (osName.contains("nux")) {
                 System.setProperty("webdriver.gecko.driver", linuxFireFoxDriverPath);
+                logger.info("You are running in Firefox Browser in Linux OS");
             }
             FirefoxOptions firefoxOptions = new FirefoxOptions();
             firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
             driver = new FirefoxDriver(firefoxOptions);
         }
-
-
-
-        /*if (osName.contains("windows")) {
-            if (browser.contains("chrome")) {
-                System.setProperty("webdriver.chrome.driver", winChromeDriverPath);
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
-                driver = new ChromeDriver(chromeOptions);
-            } else if(browser.contains("firefox")){
-                System.setProperty("webdriver.gecko.driver",winFireFoxDriverPath);
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
-                driver = new FirefoxDriver(firefoxOptions);
-            }
-        }*/
-
         driver.manage().window().maximize();
     }
 
