@@ -5,10 +5,13 @@ import org.testng.annotations.Test;
 import pages.GmailPage;
 import testbase.TestBase;
 
+import java.io.IOException;
+
 public class GmailPageTests extends TestBase {
     GmailPage gmailPage;
 
-    public GmailPageTests(){
+    public GmailPageTests() throws IOException {
+        super();
         gmailPage = PageFactory.initElements(driver,GmailPage.class);
     }
 

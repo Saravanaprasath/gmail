@@ -10,6 +10,8 @@ import org.openqa.selenium.support.FindBy;
 import selenium.SeleniumWrapper;
 import testbase.TestBase;
 
+import java.io.IOException;
+
 public class MapPage extends TestBase {
     WebDriver driver;
     SeleniumWrapper se;
@@ -17,7 +19,7 @@ public class MapPage extends TestBase {
     String mapUrl = "https://www.google.com/maps";
     String mapFile = "map.properties";
 
-    public MapPage(WebDriver driver) {
+    public MapPage(WebDriver driver) throws IOException {
         this.driver = driver;
         se = new SeleniumWrapper(driver);
         readProperties = new ReadProperties();

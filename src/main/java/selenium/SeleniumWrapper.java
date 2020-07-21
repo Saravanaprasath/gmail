@@ -9,12 +9,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import testbase.TestBase;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class SeleniumWrapper extends TestBase {
     WebDriver driver;
 
-    public SeleniumWrapper(WebDriver driver) {
+    public SeleniumWrapper(WebDriver driver) throws IOException {
+        super();
         this.driver = driver;
     }
 

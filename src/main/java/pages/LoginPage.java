@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import selenium.SeleniumWrapper;
 import testbase.TestBase;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends TestBase {
@@ -16,7 +17,8 @@ public class LoginPage extends TestBase {
     String fileName = "data.properties";
     public static String url = "https://mail.google.com/";
 
-    public LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) throws IOException {
+        super();
         this.driver = driver;
         se = new SeleniumWrapper(driver);
         readProperties = new ReadProperties();

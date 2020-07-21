@@ -5,10 +5,13 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import testbase.TestBase;
 
+import java.io.IOException;
+
 public class LoginPageTests extends TestBase {
     LoginPage loginPage;
 
-    public LoginPageTests() {
+    public LoginPageTests() throws IOException {
+        super();
         loginPage = PageFactory.initElements(driver, LoginPage.class);
     }
 

@@ -5,9 +5,12 @@ import org.testng.annotations.Test;
 import pages.MapPage;
 import testbase.TestBase;
 
+import java.io.IOException;
+
 public class MapPageTests extends TestBase {
     MapPage mapPage;
-    public MapPageTests(){
+    public MapPageTests() throws IOException {
+        super();
         mapPage = PageFactory.initElements(driver,MapPage.class);
     }
 

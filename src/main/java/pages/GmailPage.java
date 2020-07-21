@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import selenium.SeleniumWrapper;
 import testbase.TestBase;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class GmailPage extends TestBase {
@@ -15,7 +16,8 @@ public class GmailPage extends TestBase {
     ReadProperties readProperties;
     String fileName = "data.properties";
 
-    public GmailPage(WebDriver driver) {
+    public GmailPage(WebDriver driver) throws IOException {
+        super();
         this.driver = driver;
         se = new SeleniumWrapper(driver);
         readProperties = new ReadProperties();
