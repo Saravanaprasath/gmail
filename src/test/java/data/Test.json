@@ -1,0 +1,10 @@
+{
+  "name": "Saravana",
+  "age": 25,
+  "skills": [
+    "Selenium",
+    "Java",
+    "QA"
+  ],
+  "country": "India"
+}
