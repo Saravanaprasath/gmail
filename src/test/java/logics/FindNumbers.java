@@ -36,7 +36,6 @@ public class FindNumbers {
         } else {
             System.out.println(search + " is not present");
         }
-
     }
 
 
